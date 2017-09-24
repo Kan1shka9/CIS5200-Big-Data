@@ -4,6 +4,9 @@
 - Upload it to HDFS
 - Manipulate and analyze sensor data in HDFS using HiveQL
 - Visualize the result in Excel
+	- PowerView Setup
+		- [```1```](https://businessintelligist.com/2015/08/25/enabling-power-view-in-excel-2016/)
+		- [```2```](https://social.technet.microsoft.com/Forums/ie/en-US/cf4bf957-2af6-4270-8cf2-ddb34e4439c4/powerview-in-excel-2016-not-enabled?forum=excel)
 
 ![Image of sensor](images/4/1.png)
 
