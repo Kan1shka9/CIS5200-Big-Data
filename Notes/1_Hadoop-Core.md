@@ -243,4 +243,25 @@ hdfs dfs -rm -r input_old # Delete the directory input_old and all its contents
 
 ###### MapReduce: The Reducer
 
+- After the Map phase is over, all intermediate values for a given intermediate key are combined together into a list
+- This list is given to a Reducer	- There may be a single Reducer, or multiple Reducers
+	- All values associated with a particular intermediate key are guaranteed to go to the same Reducer
+	- The intermediate keys, and their value lists, are passed to the Reducer in sorted key order
+	- This step is known as the ``shuffle and sort``
 
+###### Analyzing Log Data
+
+![hadoop](images/1/17.png)
+
+###### Common Hadoop Applications
+
+- Data Processing/ETL ``Extract/Transform/Load`` offload
+
+	![hadoop](images/1/18.png)
+	
+	![hadoop](images/1/19.png)
+
+- Data Warehouse offload
+- Telemetry
+- 360-degree customer view
+- Enterprise Data Hub
