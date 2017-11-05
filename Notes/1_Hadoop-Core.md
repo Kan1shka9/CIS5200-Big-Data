@@ -211,3 +211,14 @@ hdfs dfs -rm -r input_old # Delete the directory input_old and all its contents
 ![hadoop](images/1/9.png)
 
 ![hadoop](images/1/10.png)
+
+###### MapReduce
+
+- MapReduce is a method for distributing a task across multiple nodes
+- Each node processes data stored on that node
+- Consists of two phases - ``Map`` and ``Reduce``
+- ``Job`` or ``Application``
+	- A complete execution of Mappers and Reducers over a dataset
+	- Full program
+
+![hadoop](images/1/11.png)
