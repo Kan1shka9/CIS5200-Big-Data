@@ -262,6 +262,19 @@ hdfs dfs -rm -r input_old # Delete the directory input_old and all its contents
 	![hadoop](images/1/19.png)
 
 - Data Warehouse offload
+
+	![hadoop](images/1/20.png)
+	
 - Telemetry
+	- Data collected at many points monitored in real time	- Huge amounts of data – previously hard to store and analyze
 - 360-degree customer view
 - Enterprise Data Hub
+
+	![hadoop](images/1/21.png)
+	
+	![hadoop](images/1/22.png)
+	
+- Predictive modeling
+- Recommendations and ad targeting
+- Time series analysis
+- Point of Sale (PoS) analysis
