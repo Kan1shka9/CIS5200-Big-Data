@@ -173,3 +173,36 @@ capacity
 ![hadoop](images/1/5.png)
 
 ![hadoop](images/1/6.png)
+
+###### Options for Accessing HDFS
+
+- HDFS Commands Guide ``hdfs dfs``
+
+```sh
+hdfs dfs -put foo.txt foo.txt # Copy file foo.txt from local disk to the user’s directory in HDFS
+hdfs dfs -ls # Get a directory listing of the user’s home directory in HDFS
+hdfs dfs -ls / # Get a directory listing of the HDFS root director
+hdfs dfs -cat /user/fred/bar.txt #  Display the contents of the HDFS file /user/fred/bar.txt
+hdfs dfs -get /user/fred/bar.txt baz.txt # Copy that file to the local disk, named as baz.txt
+hdfs dfs -mkdir input # Create a directory called input under the user’s home directory
+hdfs dfs -rm -r input_old # Delete the directory input_old and all its contents
+```
+
+- Java API
+- Ecosystem Projects
+	- Flume		- Collects data from network sources (e.g., system logs)
+	- Sqoop
+		- Transfers data between HDFS and RDBMS
+	- Hue
+		- Web-based interactive UI
+		- Can browse, upload, download, and view files
+
+###### Storing and Retrieving Files
+
+![hadoop](images/1/7.png)
+
+![hadoop](images/1/8.png)
+
+![hadoop](images/1/9.png)
+
+![hadoop](images/1/10.png)
