@@ -222,3 +222,25 @@ hdfs dfs -rm -r input_old # Delete the directory input_old and all its contents
 	- Full program
 
 ![hadoop](images/1/11.png)
+
+![hadoop](images/1/12.png)
+
+![hadoop](images/1/13.png)
+
+![hadoop](images/1/14.png)
+
+![hadoop](images/1/15.png)
+
+###### Mappers Run in Parallel
+
+![hadoop](images/1/16.png)
+
+###### MapReduce: The Mapper
+
+- The Mapper reads data in the form of key/value pairs	- The Mapper may use or completely ignore the input key	- For example, a standard pattern is to read one line of a file at a time		- The key is the byte offset into the file at which the line starts
+		- The value is the contents of the line itself		- Typically the key is considered irrelevant
+- If the Mapper writes anything out, the output must be in the form of key/value pairs
+
+###### MapReduce: The Reducer
+
+
