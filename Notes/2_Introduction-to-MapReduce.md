@@ -83,4 +83,13 @@
 - ``Reducer - Identity Reducer``
 
 ![mr](images/2/20.png)
+
+###### Mapper and Reducer
+
+- Mapper
+	- Maps input data to intermediate key/value pairs
+	- Parse, Filter, Transform
+- Reducer
+	- Processes Mapped output into final key/value pairs
+	- Aggregates data into key/value pairs
              
