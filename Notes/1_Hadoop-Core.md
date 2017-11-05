@@ -169,6 +169,11 @@ capacity
 
 - File system written in Java
 - Sits on top of a native filesystem - ``ext3, ext4 or xfs``
+- HDFS performs best with a modest number of large files
+	- Millions, rather than billions, of files
+	- Each file typically 100MB or more
+- HDFS is optimized for large, streaming reads of files
+	- Rather than random reads
 
 ![hadoop](images/1/5.png)
 
