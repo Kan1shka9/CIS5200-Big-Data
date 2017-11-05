@@ -12,7 +12,7 @@
 
 ![mr](images/2/1.png)
 
-###### Mapreduces Flow
+###### MapReduces Flow
 
 ![mr](images/2/2.png)
 
@@ -38,3 +38,49 @@
 
 ###### Mappers
 
+![mr](images/2/9.png)
+
+![mr](images/2/10.png)
+
+- ``Upper Case Mapper``
+
+![mr](images/2/11.png)
+
+- ``Explode Mapper``
+
+![mr](images/2/12.png)
+
+- ``Filter Mapper``
+
+![mr](images/2/13.png)
+
+- ``Changing keyspaces``
+
+![mr](images/2/14.png)
+
+- ``Identity Mapper``
+
+![mr](images/2/15.png)
+
+###### Reducers
+
+- ``Shuffle & Sort``
+
+![mr](images/2/16.png)
+
+- ``Reducer``
+
+![mr](images/2/17.png)
+
+- ``Reducer - Sum Reducer``
+
+![mr](images/2/18.png)
+
+- ``Reducer - Average Reducer`` 
+
+![mr](images/2/19.png)
+
+- ``Reducer - Identity Reducer``
+
+![mr](images/2/20.png)
+             
