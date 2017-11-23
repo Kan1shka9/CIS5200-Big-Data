@@ -1,8 +1,8 @@
 --Percentage and Count of the status of all the applications for each year
 
-REGISTER '/home/kan1shka/external_jars/piggybank-0.13.0.jar';			--Register external jar 'Piggy Bank.jar'
+REGISTER '/home/kan1shka/external_jars/piggybank-0.13.0.jar'; --Register external jar 'Piggy Bank.jar'
 
-DEFINE CSVExcelStorage org.apache.pig.piggybank.storage.CSVExcelStorage;  -- within the jar define a function CSVExcelStorage()
+DEFINE CSVExcelStorage org.apache.pig.piggybank.storage.CSVExcelStorage; --within the jar define a function CSVExcelStorage()
 
 data = LOAD '/user/kan1shka/h1bdata/h1b_kaggle.csv' USING CSVExcelStorage() as
 (s_no:int,
@@ -15,9 +15,9 @@ prevailing_wage:int,
 year:chararray,
 worksite:chararray,
 longitute:double,
-latitute:double);		--load data
+latitute:double); --load data
 
-noheader = filter data by $0>=1;   --remove header
+noheader = filter data by $0>=1; --remove header
 cleansed = filter noheader by $1 is not null and $1!='NA';
 temp = group cleansed  by $7;
 total = foreach temp generate group,COUNT(cleansed.$1);
