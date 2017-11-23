@@ -2,7 +2,7 @@
 
 REGISTER '/home/kan1shka/external_jars/piggybank-0.13.0.jar'; --Register external jar 'Piggy Bank.jar'
 
-DEFINE CSVExcelStorage org.apache.pig.piggybank.storage.CSVExcelStorage;  -- within the jar define a function CSVExcelStorage()
+DEFINE CSVExcelStorage org.apache.pig.piggybank.storage.CSVExcelStorage; --within the jar define a function CSVExcelStorage()
 
 data = LOAD '/user/kan1shka/h1bdata/h1b_kaggle.csv' USING CSVExcelStorage() as
 (s_no:int,
@@ -15,21 +15,21 @@ prevailing_wage:int,
 year:chararray,
 worksite:chararray,
 longitute:double,
-latitute:double);			--Load data
+latitute:double); --Load data
 
-noheader = filter data by $0>=1;		--Remove header
+noheader = filter data by $0>=1; --Remove header
 
 cleansed = filter noheader by $4 matches '.*DATA ENGINEER.*' and $7 matches '2011'; --filtering dataset which contains 'DATA ENGINEER' .
-a = group cleansed by $8;								--grouping by worksite
-step_a = foreach a generate '2011',group,COUNT($1);				--generate year,worksite,count
+a = group cleansed by $8; --grouping by worksite
+step_a = foreach a generate '2011',group,COUNT($1); --generate year,worksite,count
 step_b = order step_a by $2 desc;
 answer_2011 = limit step_b 1;
 
 dump answer_2011;
 
 cleansed = filter noheader by $4 matches '.*DATA ENGINEER.*' and $7 matches '2012'; --filtering dataset which contains 'DATA ENGINEER' .
-a = group cleansed by $8;								--grouping by worksite
-step_a = foreach a generate '2012',group,COUNT($1);				--generate year,worksite,count
+a = group cleansed by $8; --grouping by worksite
+step_a = foreach a generate '2012',group,COUNT($1); --generate year,worksite,count
 step_b = order step_a by $2 desc;
 answer_2012 = limit step_b 1;
 
