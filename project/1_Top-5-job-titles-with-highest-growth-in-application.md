@@ -19,3 +19,7 @@ pig jobs_highest_growth_application.pig
 (SYSTEMS ANALYST JC65,2984.8809)
 (MODULE LEAD,2917.112)
 ```
+
+- Visualization
+
+![](images/1/3.png)

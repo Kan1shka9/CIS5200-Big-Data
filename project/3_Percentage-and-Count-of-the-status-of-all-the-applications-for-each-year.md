@@ -41,3 +41,7 @@ pig stats_total_applications.pig
 (2016,WITHDRAWN,3.3791137,21890)
 (2016,CERTIFIED-WITHDRAWN,7.269494,47092)
 ```
+
+- Visualization
+
+![](images/3/3.png)

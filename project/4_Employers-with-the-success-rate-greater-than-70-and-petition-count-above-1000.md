@@ -249,3 +249,7 @@ pig highest_success_rate.pig
 (CITRIX SYSTEMS, INC.,85.344826,1044)
 (NETAPP, INC.,84.545456,1870)
 ```
+
+- Visualization
+
+![](images/4/3.png)

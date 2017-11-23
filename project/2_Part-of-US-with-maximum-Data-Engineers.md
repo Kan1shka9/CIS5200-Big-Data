@@ -30,3 +30,7 @@ pig most_data_engineers.pig
 (2015,SAN FRANCISCO, CALIFORNIA,61)
 (2016,SEATTLE, WASHINGTON,128)
 ```
+
+- Visualization
+
+![](images/2/8.png)
