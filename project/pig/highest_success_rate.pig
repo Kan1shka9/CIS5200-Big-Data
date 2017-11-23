@@ -1,8 +1,8 @@
 --Employers with the success-rate greater than 70% and petition count above 1000
 
-REGISTER '/home/kan1shka/external_jars/piggybank-0.13.0.jar';	--Register external jar 'Piggy Bank.jar'
+REGISTER '/home/kan1shka/external_jars/piggybank-0.13.0.jar'; --Register external jar 'Piggy Bank.jar'
 
-DEFINE CSVExcelStorage org.apache.pig.piggybank.storage.CSVExcelStorage;	 --within the jar define a function CSVExcelStorage()
+DEFINE CSVExcelStorage org.apache.pig.piggybank.storage.CSVExcelStorage; --within the jar define a function CSVExcelStorage()
 
 data = LOAD '/user/kan1shka/h1bdata/h1b_kaggle.csv' USING CSVExcelStorage() as
 (s_no:int,
@@ -15,7 +15,7 @@ prevailing_wage:int,
 year:chararray,
 worksite:chararray,
 longitute:double,
-latitute:double);  --Load data
+latitute:double); --Load data
 
 noheader = filter data by $0>=1; --Remove header
 
