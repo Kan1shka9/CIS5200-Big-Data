@@ -19,40 +19,40 @@ latitute:double); --Load data
 
 noheader = filter data by $0>=1; --Remove header
 
-cleansed = filter noheader  by $7 matches '2011';  --filtering dataset by year
-a = group cleansed by $4;								           --grouping by job
-step_a = foreach a generate group,COUNT($1);			 --generate year,job,count
+cleansed = filter noheader  by $7 matches '2011'; --filtering dataset by year
+a = group cleansed by $4; --grouping by job
+step_a = foreach a generate group,COUNT($1); --generate year,job,count
 
 
-cleansed = filter noheader  by $7 matches '2012';  --filtering dataset by year
-a = group cleansed by $4;								           --grouping by job
-step_b = foreach a generate group,COUNT($1);			 --generate year,job,count
+cleansed = filter noheader  by $7 matches '2012'; --filtering dataset by year
+a = group cleansed by $4; --grouping by job
+step_b = foreach a generate group,COUNT($1); --generate year,job,count
 
 
-cleansed = filter noheader  by $7 matches '2013';  --filtering dataset by year
-a = group cleansed by $4;								           --grouping by job
-step_c = foreach a generate group,COUNT($1);			 --generate year,job,count
+cleansed = filter noheader  by $7 matches '2013'; --filtering dataset by year
+a = group cleansed by $4; --grouping by job
+step_c = foreach a generate group,COUNT($1); --generate year,job,count
 
 
-cleansed = filter noheader  by $7 matches '2014';  --filtering dataset by year
-a = group cleansed by $4;								           --grouping by job
-step_d = foreach a generate group,COUNT($1);			 --generate year,job,count
+cleansed = filter noheader  by $7 matches '2014'; --filtering dataset by year
+a = group cleansed by $4; --grouping by job
+step_d = foreach a generate group,COUNT($1); --generate year,job,count
 
-cleansed = filter noheader  by $7 matches '2015';  --filtering dataset by year
-a = group cleansed by $4;								           --grouping by job
-step_e = foreach a generate group,COUNT($1);			 --generate year,job,count
+cleansed = filter noheader  by $7 matches '2015'; --filtering dataset by year
+a = group cleansed by $4; --grouping by job
+step_e = foreach a generate group,COUNT($1); --generate year,job,count
 
 
-cleansed = filter noheader  by $7 matches '2016';  --filtering dataset by year
-a = group cleansed by $4;								           --grouping by job
-step_f = foreach a generate group,COUNT($1);			 --generate year,job,count
+cleansed = filter noheader  by $7 matches '2016'; --filtering dataset by year
+a = group cleansed by $4; --grouping by job
+step_f = foreach a generate group,COUNT($1); --generate year,job,count
 
 
 joined = join step_a by $0,step_b by $0,step_c by $0,step_d by $0,step_e by $0,step_f by $0;
 yearwiseapplications = foreach joined generate $0,$1,$3,$5,$7,$9,$11;
 
 --generate progressive growth
-progressivegrowth = foreach yearwiseapplications  generate $0,
+progressivegrowth = foreach yearwiseapplications generate $0,
 (float)($6-$5)*100/$5,(float)($5-$4)*100/$4,
 (float)($4-$3)*100/$3,(float)($3-$2)*100/$2,
 (float)($2-$1)*100/$1;
@@ -64,5 +64,5 @@ avgprogressivegrowth = foreach progressivegrowth generate $0,($1+$2+$3+$4+$5)/5;
 orderedavggrowth = order avgprogressivegrowth by $1 desc;
 
 --display top5 only
-answer = limit orderedavggrowth  5;
+answer = limit orderedavggrowth 5;
 dump answer;
