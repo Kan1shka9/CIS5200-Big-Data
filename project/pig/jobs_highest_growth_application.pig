@@ -1,8 +1,8 @@
 --Top 5 job titles with highest growth in application
 
-REGISTER '/home/kan1shka/external_jars/piggybank-0.13.0.jar'; 			      --Register external jar 'Piggy Bank.jar'
+REGISTER '/home/kan1shka/external_jars/piggybank-0.13.0.jar'; --Register external jar 'Piggy Bank.jar'
 
-DEFINE CSVExcelStorage org.apache.pig.piggybank.storage.CSVExcelStorage;  --within the jar define a function CSVExcelStorage()
+DEFINE CSVExcelStorage org.apache.pig.piggybank.storage.CSVExcelStorage; --within the jar define a function CSVExcelStorage()
 
 data = LOAD '/user/kan1shka/h1bdata/h1b_kaggle.csv' USING CSVExcelStorage() as
 (s_no:int,
@@ -15,9 +15,9 @@ prevailing_wage:int,
 year:chararray,
 worksite:chararray,
 longitute:double,
-latitute:double);					          --Load data
+latitute:double); --Load data
 
-noheader = filter data by $0>=1;		--Remove header
+noheader = filter data by $0>=1; --Remove header
 
 cleansed = filter noheader  by $7 matches '2011';  --filtering dataset by year
 a = group cleansed by $4;								           --grouping by job
