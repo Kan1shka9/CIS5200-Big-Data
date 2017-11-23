@@ -36,8 +36,24 @@ hdfs dfs -ls h1bdata/
 
 ![](images/0/4.png)
 
+- Project Structure
+
 ```sh
 tree
 ```
 
 ![](images/0/5.png)
+
+- Backup
+
+```sh
+tar -cvf myarchive.tar dataset/ external_jars/ pig_scripts/
+```
+
+![](images/0/6.png)
+
+```sh
+scp kan1shka@bi-hadoop-prod-4302.bi.services.us-south.bluemix.net:/home/kan1shka/myarchive.tar .
+```
+
+![](images/0/7.png)
